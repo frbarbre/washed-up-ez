@@ -2,7 +2,3 @@
 node_modules
 package-lock.json
 bun.lockb
-deploy.sh
-update.sh
-.env
-.env.*
