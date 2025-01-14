@@ -1,19 +1,19 @@
 services:
-  washed-sveltekit:
+  new-sveltekit:
     build:
       context: ./frontend-svelte
     ports:
-      - "3005:3000"
+      - "3000:3000"
     networks:
       - washed-up-ez-network
     depends_on:
-      - washed-laravel
+      - new-laravel
     environment:
       ORIGIN: ${ORIGIN}
-      API_URL: http://washed-laravel
+      API_URL: http://new-laravel
       AUTH_SECRET: ${AUTH_SECRET}
 
-  washed-laravel:
+  new-laravel:
     build:
       context: ./backend-laravel
     ports:
